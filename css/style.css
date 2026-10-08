@@ -622,7 +622,7 @@ ul {
 }
 
 /* ========================
-   SECCIÓN CONTACTO
+    SECCIÓN CONTACTO
    ======================== */
 .seccion-contacto {
     background-color: var(--color-fondo-claro);
@@ -647,10 +647,11 @@ ul {
 .bloque-info {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-.icono-info {
+.icono-info,
+.btn-red-social {
     width: 55px;
     height: 55px;
     background: rgba(212, 175, 55, 0.08);
@@ -663,72 +664,130 @@ ul {
     margin-right: 20px;
     flex-shrink: 0;
     border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: var(--transicion-suave);
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.redes-iconos {
-    display: flex;
-    gap: 15px;
-    margin-top: 45px;
-}
-
-.btn-red-social {
-    width: 45px;
-    height: 45px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-texto);
-    font-size: 1.1rem;
+.icono-info i,
+.btn-red-social i {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    color: var(--color-dorado);
     transition: var(--transicion-suave);
 }
 
+.icono-info:hover,
 .btn-red-social:hover {
     background: var(--gradiente-metalico);
     color: #000;
     border-color: transparent;
     transform: translateY(-3px);
-    box-shadow: var(--sombra-dorada);
+    box-shadow: var(--sombra-dorada-hover);
 }
 
-/* Formulario */
-.formulario-contacto {
-    width: 100%;
+.icono-info:hover i,
+.btn-red-social:hover i {
+    color: #000;
 }
 
-.grupo-input {
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.campo-texto {
-    width: 100%;
-    padding: 16px 20px;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    color: var(--color-texto);
-    font-family: var(--fuente-principal);
-    font-size: 1rem;
+.enlace-info {
+    color: inherit;
+    text-decoration: none;
     transition: var(--transicion-suave);
 }
 
-.campo-texto:focus {
-    outline: none;
+.enlace-info:hover {
+    color: var(--color-dorado-brillante);
+}
+
+.redes-iconos {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.div-redes p {
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    margin-top: 5px;
+}
+
+.cta-contacto {
+    margin-top: 35px;
+    padding: 28px;
+    border-radius: 18px;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.08);
+}
+
+.cta-contacto h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.cta-contacto p {
+    color: var(--color-texto-secundario);
+    line-height: 1.7;
+}
+
+.contacto-panel {
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.98), rgba(10, 10, 10, 0.98));
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+    display: grid;
+    gap: 18px;
+}
+
+.contacto-lista {
+    display: grid;
+    gap: 14px;
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.contacto-lista li {
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+}
+
+.contacto-lista a {
+    color: var(--color-dorado-brillante);
+}
+
+.contacto-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.boton-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    background: transparent;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transicion-suave);
+}
+
+.boton-secundario:hover {
+    background: rgba(212, 175, 55, 0.12);
     border-color: var(--color-dorado);
-    background-color: rgba(212, 175, 55, 0.02);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-}
-
-.area-texto {
-    resize: vertical;
-    min-height: 160px;
-}
-
-/* Ocultar placeholders y usar efecto de label flotante sutil */
-.campo-texto::placeholder {
-    color: rgba(255,255,255,0.3);
+    color: var(--color-dorado-brillante);
+    transform: translateY(-2px);
 }
 
 .alerta-error {
